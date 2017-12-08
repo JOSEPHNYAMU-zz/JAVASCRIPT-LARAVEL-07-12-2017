@@ -42859,6 +42859,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -42908,110 +42930,147 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("form", [
-      _c("div", { staticClass: "form-group" }, [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.blog.title,
-              expression: "blog.title"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            type: "text",
-            required: "",
-            id: "exampleInputEmail1",
-            "aria-describedby": "emailHelp",
-            placeholder: "Enter Title"
-          },
-          domProps: { value: _vm.blog.title },
-          on: {
-            keydown: function($event) {
-              if (
-                !("button" in $event) &&
-                _vm._k($event.keyCode, "enter", 13, $event.key)
-              ) {
-                return null
-              }
-              _vm.create($event)
-            },
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.blog, "title", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c(
-          "textarea",
-          {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.blog.body,
-                expression: "blog.body"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { required: "", id: "exampleTextarea", rows: "3" },
-            domProps: { value: _vm.blog.body },
-            on: {
-              keydown: function($event) {
-                if (
-                  !("button" in $event) &&
-                  _vm._k($event.keyCode, "enter", 13, $event.key)
-                ) {
-                  return null
-                }
-                _vm.create($event)
-              },
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.blog, "body", $event.target.value)
-              }
-            }
-          },
-          [_vm._v("Blog Content")]
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary pull-right",
-          attrs: { type: "submit" },
-          on: { click: _vm.create }
-        },
-        [_vm._v("ADD BLOG")]
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "blogs-list" }, [
-      _c(
-        "ul",
-        { staticClass: "list-unstyled" },
-        _vm._l(_vm.blogs, function(blog) {
-          return _c("li", { key: blog.id }, [
-            _vm._v(
-              "\n              " +
-                _vm._s(blog.title) +
-                "\n                " +
-                _vm._s(blog.body) +
-                "\n            "
-            )
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-6" }, [
+        _c("div", { staticClass: "panel panel-default" }, [
+          _c("div", { staticClass: "panel-heading" }, [
+            _vm._v("Available Blogs")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "panel-body" }, [
+            _c("div", { staticClass: "blogs-list" }, [
+              _c(
+                "ul",
+                { staticClass: "list-unstyled" },
+                _vm._l(_vm.blogs, function(blog) {
+                  return _c("li", { key: blog.id }, [
+                    _c(
+                      "h4",
+                      {
+                        staticStyle: {
+                          "background-color": "green",
+                          padding: "10px",
+                          color: "#ffffff"
+                        }
+                      },
+                      [_vm._v(_vm._s(blog.title))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticStyle: {
+                          "background-color": "#cccccc",
+                          padding: "10px"
+                        }
+                      },
+                      [_vm._v(_vm._s(blog.body))]
+                    ),
+                    _vm._v(" "),
+                    _c("hr")
+                  ])
+                })
+              )
+            ])
           ])
-        })
-      )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-6" }, [
+        _c("div", { staticClass: "panel panel-default" }, [
+          _c("div", { staticClass: "panel-heading" }, [_vm._v("New Blog")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "panel-body" }, [
+            _c("form", [
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.blog.title,
+                      expression: "blog.title"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    required: "",
+                    id: "exampleInputEmail1",
+                    "aria-describedby": "emailHelp",
+                    placeholder: "Enter Title"
+                  },
+                  domProps: { value: _vm.blog.title },
+                  on: {
+                    keydown: function($event) {
+                      if (
+                        !("button" in $event) &&
+                        _vm._k($event.keyCode, "enter", 13, $event.key)
+                      ) {
+                        return null
+                      }
+                      _vm.create($event)
+                    },
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.blog, "title", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group" }, [
+                _c(
+                  "textarea",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.blog.body,
+                        expression: "blog.body"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { required: "", id: "exampleTextarea", rows: "3" },
+                    domProps: { value: _vm.blog.body },
+                    on: {
+                      keydown: function($event) {
+                        if (
+                          !("button" in $event) &&
+                          _vm._k($event.keyCode, "enter", 13, $event.key)
+                        ) {
+                          return null
+                        }
+                        _vm.create($event)
+                      },
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.blog, "body", $event.target.value)
+                      }
+                    }
+                  },
+                  [_vm._v("Blog Content")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary pull-right",
+                  attrs: { type: "submit" },
+                  on: { click: _vm.create }
+                },
+                [_vm._v("ADD BLOG")]
+              )
+            ])
+          ])
+        ])
+      ])
     ])
   ])
 }
